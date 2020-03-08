@@ -1,0 +1,15 @@
+s={}
+while True:
+    na=str(input("enter name of the person (write 'end' to stop ):"))
+    if na in s:
+        ph = str(input("enter the phone number:"))                   #if same person has multiple numbers
+        s[na].append(ph)
+        continue
+    if na=='end':
+        break
+    else:
+        ph=[str(input("enter the phone number:"))]
+        s[na]=ph
+o=dict(sorted(s.items()))
+for k,v in o.items():
+    print(k ,':' , v)
