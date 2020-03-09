@@ -1,0 +1,26 @@
+def upper_lower(*sr):
+    u=[]
+    l=[]
+    big=0
+    small=0
+    t={}
+    for i in sr:
+
+            for o in i:
+                if o.isupper():
+                    u.append(o)
+                    big+=1
+                elif o.islower():
+                    l.append(o)
+                    small+=1
+                else:
+                    continue
+    t["upper"]=big
+    t["lower"]=small
+    p=list(u)
+    y=list(l)
+    return t,p,l
+
+
+z,q,w=upper_lower("123456789Absvcscsnecgsabcgc;uhCUBaCUAFAEIBJHJHJGEGFBKIRSNAa,")
+print(z,q,w)
