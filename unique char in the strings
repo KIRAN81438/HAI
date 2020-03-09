@@ -1,0 +1,9 @@
+def unique(*sr):
+    s=set()
+    for i in sr:
+        for o in i:
+            s.add(o)
+    return (sorted(s))
+
+z=unique("kiransai","kiran sai","kiran sai kumar","kamala")
+print(z)
